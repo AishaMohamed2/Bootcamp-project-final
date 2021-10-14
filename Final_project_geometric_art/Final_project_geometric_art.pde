@@ -2,7 +2,8 @@ float xPos;
 float xspeed; 
 float yPos;
 float yspeed;
-
+boolean isIn = false;    // -- is the mouse in the rect()?
+boolean isOn = false; 
  
 void setup()
 {
@@ -43,8 +44,7 @@ while(y<10){ //a loop within a loop to produce a grid of rectangles for y axis
    //and the numbers in the bracket affect the scale of the shapes
    float colour= random(255);
    
-   float t = frameCount/20.0;
-  point(width/2 + squareSize*cos(t), height/2 + squareSize*sin(t)); 
+ 
   
    fill(colour,colour,90);
   ellipse(posX,posY,50,50);
@@ -91,15 +91,15 @@ if(yPos<0){
  
 }
  
- 
-
-    
   }
 
 }
 
 
 }
+
+
+ 
 
 
 
